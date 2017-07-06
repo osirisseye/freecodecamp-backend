@@ -1,6 +1,6 @@
 {
   "name": "first-project",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "my npm tutorial",
   "main": "index.js",
   "scripts": {
@@ -9,6 +9,15 @@
   "author": "L Andruchow",
   "license": "ISC",
   "dependencies": {
-    "@linclark/pkg": "^1.0.2"
-  }
+    
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/osirisseye/freecodecamp-backend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/osirisseye/freecodecamp-backend/issues"
+  },
+  "homepage": "https://github.com/osirisseye/freecodecamp-backend#readme"
 }
