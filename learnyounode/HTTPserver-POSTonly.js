@@ -13,17 +13,16 @@ var port = process.argv[2];
 var server = http.createServer(function(req,res){
 	
 //2. !!!!!! first filtering for POST requests ONLY
-	if (req.method === 'POST'){	
-
+	if (req.method != 'POST'){	
+		return res.end('send me a POST req');
+	}
 //1 continued! When we have POST only then we will write REQ STATUS (number) and content type
 		res.writeHead(200, {'Content-Type':'text/plain'});
 //3 We use our map functionality from through2-map and turn chunks to upper case
 		req.pipe(map(function(chunk){
 			return chunk.toString().toUpperCase()
-		}));
 //4. Finally we are piping transformed chunks into our response.
-		req.pipe(res);
-	} 
-
+		})).pipe(res)
+		
 });
 server.listen(port);
